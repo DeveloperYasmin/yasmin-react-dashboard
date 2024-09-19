@@ -1,17 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-
+import ReactDOM from 'react-dom';
+import './styles/tailwind.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Chart, LineElement, BarElement, ArcElement, CategoryScale, LinearScale, PointElement, LineController, PieController, BarController, Title, Tooltip, Legend } from 'chart.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// Register Chart.js components globally
+Chart.register(
+  LineElement,
+  BarElement,
+  ArcElement,   // For Pie and Doughnut Charts
+  CategoryScale, // For X-Axis
+  LinearScale,   // For Y-Axis
+  PointElement,
+  LineController,
+  BarController,
+  PieController,
+  Title,
+  Tooltip,
+  Legend
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Render the App
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

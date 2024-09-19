@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yasmin-react-dashboard/static/css/main.49f0510f.css",
+    "main.js": "/yasmin-react-dashboard/static/js/main.b6215317.js",
+    "index.html": "/yasmin-react-dashboard/index.html",
+    "main.49f0510f.css.map": "/yasmin-react-dashboard/static/css/main.49f0510f.css.map",
+    "main.b6215317.js.map": "/yasmin-react-dashboard/static/js/main.b6215317.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49f0510f.css",
+    "static/js/main.b6215317.js"
+  ]
+}

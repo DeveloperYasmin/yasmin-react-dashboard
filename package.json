@@ -1,6 +1,7 @@
 {
   "name": "yasmin-react-dashboard",
   "version": "0.1.0",
+  "homepage":"https://developeryasmin.github.io/yasmin-react-dashboard/",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -21,6 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,6 +47,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12"
   }

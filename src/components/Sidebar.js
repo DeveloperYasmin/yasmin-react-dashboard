@@ -1,21 +1,26 @@
 import React from 'react';
-import Icon from './Icon'; // Reusable Icon component for the icons
+import { FaHome, FaChartPie, FaUserFriends, FaTicketAlt, FaCogs } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
-    <div className="w-20 h-screen bg-gray-50 shadow-lg flex flex-col items-center justify-between p-4">
-      {/* Menu Items */}
-      <div className="flex flex-col space-y-6">
-        <Icon name="home" size="24" />
-        <Icon name="chart" size="24" />
-        <Icon name="support" size="24" />
-        <Icon name="settings" size="24" />
-      </div>
-      
-      {/* Raise a Ticket Button */}
-      <button className="bg-blue-500 text-white p-2 rounded-lg w-full">
-        Raise a Ticket
-      </button>
+    <div className="w-20  h-full fixed top-0 left-0 bg-white  p-6">
+      <ul className="space-y-6">
+        <li className="flex items-center space-x-4 text-blue-600 hover:bg-blue-100 p-2 rounded-md">
+          <FaHome className="text-2xl" />
+        </li>
+        <li className="flex items-center space-x-4 text-blue-600 hover:bg-blue-100 p-2 rounded-md">
+          <FaChartPie className="text-2xl" />
+        </li>
+        <li className="flex items-center space-x-4 text-blue-600 hover:bg-blue-100 p-2 rounded-md">
+          <FaUserFriends className="text-2xl" />
+        </li>
+        <li className="flex items-center space-x-4 text-blue-600 hover:bg-blue-100 p-2 rounded-md">
+          <FaTicketAlt className="text-2xl" />
+        </li>
+        <li className="flex items-center space-x-4 text-blue-600 hover:bg-blue-100 p-2 rounded-md">
+          <FaCogs className="text-2xl" />
+        </li>
+      </ul>
     </div>
   );
 };

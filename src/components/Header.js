@@ -1,5 +1,6 @@
 import React from 'react';
-import Icon from './Icon'; // Reusable Icon component for the icons
+import Icon from './Icon';
+import avatar from "../assets/images/avatar.jpg" // Reusable Icon component for the icons
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
         <Icon name="notifications" size="24" />
         <Icon name="messages" size="24" />
         <div className="flex items-center space-x-3">
-          <img src="/assets/images/avatar.jpg" alt="Profile" className="w-10 h-10 rounded-full" />
+          <img src={avatar} alt="profile" className="w-10 h-10 rounded-full" />
           <span className="font-medium">Hi, Saikumar</span>
         </div>
       </div>

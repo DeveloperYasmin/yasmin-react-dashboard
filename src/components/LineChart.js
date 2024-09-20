@@ -1,6 +1,5 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart } from 'chart.js'; // Ensure this import exists, and components registered globally as shown above
 
 const LineChart = () => {
   const data = {

@@ -22,7 +22,7 @@ const PerformanceMetrics = () => {
 
       <div className="bg-white shadow-lg rounded-lg p-4 mt-4">
         <h3 className="text-lg font-semibold mb-4">Service Providers Report</h3>
-        <PieChart />
+        <PieChart className="w-full"/>
       </div>
     </div>
   );

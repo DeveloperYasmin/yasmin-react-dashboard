@@ -1,15 +1,16 @@
+import React from "react";
 
-
-import React from 'react';
-
-const Card = ({ title, value, percentage, info }) => {
+const Card = ({ title, value, icon }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4  space-x-4">
+    <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-between">
+      <div>
+        <h2 className="text-xl font-semibold">{title}</h2>
+        <p className="text-2xl font-bold text-gray-800">{value}</p>
+      </div>
+      <div className="text-4xl text-blue-600">
+        {icon}
+      </div>
 
-      <h4 className="text-lg font-semibold text-gray-700">{title}</h4>
-      <h2 className="text-2xl font-bold text-gray-900">{value}</h2>
-      <p className="text-2xl font-bold text-gray-900">{percentage}</p>
-      <small>{info}</small>
     </div>
   );
 };

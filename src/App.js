@@ -1,64 +1,77 @@
-import React from 'react';
-import Sidebar from './components/Sidebar'; // Import the Sidebar component
-import Header from './components/Header'; // Import the Header component
-import LineChart from './components/LineChart'; // Import LineChart component
-import PieChart from './components/PieChart'; // Import PieChart component
-import BarChart from './components/BarChart'; // Import BarChart component
-import ServiceProviders from './components/ServiceProviders'; // Import ServiceProviders component
-import SupportTickets from './components/SupportTickets'; // Import SupportTickets component
-import PerformanceMetrics from './components/PerformanceMetrics'; // Import SupportTickets component
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Card from "./components/Card";
+import LineChart from "./components/LineChart";
+import PieChart from "./components/PieChart";
+import BarChart from "./components/BarChart";
+import ServiceProviders from "./components/ServiceProviders";
+import SupportTickets from "./components/SupportTickets";
+import TopServiceProviders from "./components/TopServiceProviders";
+import ServiceOfferings from "./components/ServiceOfferings";
+import { FaUsers, FaChartLine, FaCheckCircle } from "react-icons/fa";
 
-
-function App() {
+const App = () => {
   return (
-    <div className="">
+    <div className="flex">
       {/* Sidebar */}
-      <Sidebar />
+      <div className="w-20 mr-2 h-full bg-white shadow-lg p-6">
+        <Sidebar />
+      </div>
 
       {/* Main content area */}
-      <div className=" p-6 bg-gray-100">
-        {/* Header Section */}
+      <div className="flex-1 flex flex-col bg-gray-100 p-6">
+        {/* Header */}
         <Header />
 
         {/* Performance Metrics Section */}
-        <section className="mb-6">
-          <h1 className="text-3xl font-bold mb-6">Performance Metrics</h1>
-         
-         
-          <PerformanceMetrics/>
-        </section>
-
-        {/* Service Providers Section */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Service Providers</h2>
-          <ServiceProviders />
-        </section>
-
-        {/* Service Offerings Section */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Service Offerings</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <LineChart />
-            <BarChart />
+        <div className="mb-8">
+          <h1 className="text-2xl font-bold mb-8 mt-5">Performance Metrics</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Card title="Total Service Providers" value="Rs. xxx.xx" icon={<FaUsers />} />
+            <Card title="New Service Providers" value="xxxx" icon={<FaChartLine />} />
+            <Card title="Active Service Providers" value="xxxx" icon={<FaCheckCircle />} />
+            <Card title="Service Completion Rate" value="85%" icon={<FaCheckCircle />} />
           </div>
-        </section>
+        </div>
 
-        {/* Support Tickets Section */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Support Tickets</h2>
-          <SupportTickets />
-        </section>
-
-        {/* Demographics (Pie Chart) Section */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Demographics</h2>
-          <div className="w-full">
+        {/* Charts and Other Metrics */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-8">
+          {/* Line Chart for Performance */}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <LineChart />
+          </div>
+          {/* Pie Chart for Demographics */}
+          <div className="bg-white w-42 h-full rounded-lg shadow-lg">
             <PieChart />
           </div>
-        </section>
+        </div>
+
+        {/* Bar Chart and Service Offerings */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+          {/* Bar Chart for Service Offerings */}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <BarChart />
+          </div>
+          {/* Service Offerings */}
+          <ServiceOfferings />
+        </div>
+
+        {/* Service Providers and Support Tickets */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+          {/* Service Providers Demographics */}
+          <ServiceProviders />
+          {/* Support Tickets */}
+          <SupportTickets />
+        </div>
+
+        {/* Top Service Providers */}
+        <div className="mb-8">
+          <TopServiceProviders />
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;

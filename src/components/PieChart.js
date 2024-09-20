@@ -15,7 +15,7 @@ const PieChart = () => {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false, // This allows you to control the size
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,
@@ -25,7 +25,7 @@ const PieChart = () => {
   };
 
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 h-96 p-4 bg-white shadow-lg rounded-lg">
+    <div className="w-full h-96 p-4 bg-white shadow-lg rounded-lg flex items-center justify-center">
       <Pie data={data} options={options} />
     </div>
   );
